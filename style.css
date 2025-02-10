@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    color: black;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+button {
+    background:#ff5e78;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+} 
+
+button:hover {
+    background: #ff3366;
+}
+
+.letter {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    display: none; /* Mantén esto aquí para que esté oculto inicialmente */
+}
+
+/* Estilo para la galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  /* Hace que las imágenes se acomoden en una cuadrícula flexible */
+    gap: 10px;
+    padding: 20px;
+}
+
+.photo {
+    border: 2px solid #fff;  /* Bordes blancos para resaltar las fotos */
+    border-radius: 8px;
+    overflow: hidden;  /* Para que las imágenes no sobresalgan de los bordes */
+}
+
+.thumbnail {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;  /* Animación de expansión cuando se pasa el mouse */
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);  /* Hace que las miniaturas crezcan un poco */
+}
+
+/* Modal (para ver la imagen en grande) */
+.modal {
+    display: none;  /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);  /* Fondo oscuro transparente */
+    padding-top: 60px;  /* Espacio desde la parte superior */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff5e78;  /* Color cuando el ratón pasa sobre la 'X' */
+}
+
+.cat-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 100px; /* Tamaño del gato */
+}
+
+.cat-container img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cat-container img:hover {
+    transform: scale(1.2); /* Hace que el gatito crezca un poco al pasar el ratón */
+}
