@@ -29,18 +29,20 @@ document.getElementById("cuteCat").addEventListener("click", function() {
     alert("¡Miau! Sofi, eres la persona más linda del mundo 🐱❤️");
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    let music = new Audio("abrazado_a_ti.mp3");
+document.addEventListener("DOMContentLoaded", function () {
+    let music = document.getElementById("newBgMusic");
+    let playButton = document.getElementById("newPlayMusic");
 
-    document.addEventListener("keydown", function(event) {
-        if (event.key === "p") { // Presiona "p" para reproducir/pausar
-            if (music.paused) {
-                music.play().then(() => console.log("🎵 Reproduciendo..."))
-                    .catch(error => console.error("Error al reproducir:", error));
-            } else {
-                music.pause();
-                console.log("⏸ Música pausada");
-            }
+    playButton.addEventListener("click", function () {
+        if (music.paused) {
+            music.play().then(() => {
+                playButton.textContent = "⏸ Pausar Música";
+            }).catch(error => {
+                console.error("Error al reproducir:", error);
+            });
+        } else {
+            music.pause();
+            playButton.textContent = "🎵 Reproducir Música";
         }
     });
 });
