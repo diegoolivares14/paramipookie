@@ -31,12 +31,15 @@ document.getElementById("cuteCat").addEventListener("click", function() {
 
 document.getElementById("newPlayMusic").addEventListener("click", function() {
     let music = document.getElementById("newBgMusic");
+
     if (music.paused) {
-        music.play();
-        this.textContent = "⏸ Pausar Música";
+        music.play().then(() => {
+            this.textContent = "⏸ Pausar Música";
+        }).catch(error => {
+            console.error("No se pudo reproducir el audio:", error);
+        });
     } else {
         music.pause();
         this.textContent = "🎵 Reproducir Música";
     }
 });
-
