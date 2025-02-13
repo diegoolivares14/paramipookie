@@ -30,8 +30,13 @@ document.getElementById("cuteCat").addEventListener("click", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("playMusic").addEventListener("click", function() {
-        const audio = document.getElementById("bgMusic");
-        audio.play();
-    });
+    const button = document.getElementById("playMusic");
+    if (button) {
+        button.addEventListener("click", function() {
+            const audio = document.getElementById("bgMusic");
+            audio.play();
+        });
+    } else {
+        console.error('No se encontró el botón "playMusic"');
+    }
 });
