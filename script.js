@@ -29,20 +29,7 @@ document.getElementById("cuteCat").addEventListener("click", function() {
     alert("¡Miau! Sofi, eres la persona más linda del mundo 🐱❤️");
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    let music = document.getElementById("newBgMusic");
-    let playButton = document.getElementById("newPlayMusic");
-
-    playButton.addEventListener("click", function () {
-        if (music.paused) {
-            music.play().then(() => {
-                playButton.textContent = "⏸ Pausar Música";
-            }).catch(error => {
-                console.error("Error al reproducir:", error);
-            });
-        } else {
-            music.pause();
-            playButton.textContent = "🎵 Reproducir Música";
-        }
-    });
+document.getElementById("playMusic").addEventListener("click", function() {
+    const audio = document.getElementById("bgMusic");
+    audio.play();
 });
