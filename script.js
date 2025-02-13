@@ -29,23 +29,14 @@ document.getElementById("cuteCat").addEventListener("click", function() {
     alert("¡Miau! Sofi, eres la persona más linda del mundo 🐱❤️");
 });
 
-// Seleccionamos el botón
-const playButton = document.getElementById("playMusic");
-
-// Creamos un objeto de audio con la canción
-const song = new Audio("abrazado_a_ti.mp3");
-
-// Variable para saber si la música está sonando
-let isPlaying = false;
-
-// Función para reproducir o pausar la música
-playButton.addEventListener("click", function() {
-    if (isPlaying) {
-        song.pause();
-        playButton.innerText = "🎶 Reproducir nuestra canción";
+document.getElementById("newPlayMusic").addEventListener("click", function() {
+    let music = document.getElementById("newBgMusic");
+    if (music.paused) {
+        music.play();
+        this.textContent = "⏸ Pausar Música";
     } else {
-        song.play();
-        playButton.innerText = "⏸️ Pausar música";
+        music.pause();
+        this.textContent = "🎵 Reproducir Música";
     }
-    isPlaying = !isPlaying;
 });
+
