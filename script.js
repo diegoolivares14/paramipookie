@@ -29,7 +29,9 @@ document.getElementById("cuteCat").addEventListener("click", function() {
     alert("¡Miau! Sofi, eres la persona más linda del mundo 🐱❤️");
 });
 
-document.getElementById("playMusic").addEventListener("click", function() {
-    const audio = document.getElementById("bgMusic");
-    audio.play();
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("playMusic").addEventListener("click", function() {
+        const audio = document.getElementById("bgMusic");
+        audio.play();
+    });
 });
