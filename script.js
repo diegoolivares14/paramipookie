@@ -33,7 +33,7 @@ document.getElementById("cuteCat").addEventListener("click", function() {
 const playButton = document.getElementById("playMusic");
 
 // Creamos un objeto de audio con la canción
-const song = new Audio("kevin_kaarl.mp3");
+const song = new Audio("https://github.com/diegoolivares14/paramipookie/blob/d5f968ed2cc6d410069e5e3225182533dcf3a065/kevin_kaarl.mp3");
 
 // Variable para saber si la música está sonando
 let isPlaying = false;
