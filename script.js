@@ -33,7 +33,7 @@ document.getElementById("cuteCat").addEventListener("click", function() {
 const playButton = document.getElementById("playMusic");
 
 // Creamos un objeto de audio con la canción
-const song = new Audio("URL_DE_TU_CANCION");
+const song = new Audio("kevin kaarl - Abrazado a Ti.mp3");
 
 // Variable para saber si la música está sonando
 let isPlaying = false;
