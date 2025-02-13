@@ -45,7 +45,7 @@ playButton.addEventListener("click", function() {
         playButton.innerText = "🎶 Reproducir nuestra canción";
     } else {
         song.play();
-        playButton.innerText = "⏸️ Pausar música";
+        playButton.innerText = "No me dejes de sonar :(";
     }
     isPlaying = !isPlaying;
 });
