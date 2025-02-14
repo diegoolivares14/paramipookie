@@ -5,6 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> PARA MI SOFI LINDA<3 </title>
     <link rel="stylesheet" href="style.css">
+     <title>Corazones Caídos</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #111;
+        }
+
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 20px;
+            animation: fall 5s infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                opacity: 1;
+                transform: translateY(-100px) rotate(0deg);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(100vh) rotate(720deg);
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
