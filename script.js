@@ -49,3 +49,10 @@ playButton.addEventListener("click", function() {
     }
     isPlaying = !isPlaying;
 });
+  
+var startDate = new Date("2023-07-09");  // Fecha de inicio de la relación
+  var today = new Date();
+  var timeDifference = today - startDate;
+  var daysTogether = Math.floor(timeDifference / (1000 * 3600 * 24));
+  document.getElementById("contador").innerHTML = daysTogether + " días juntos 💖";
+
