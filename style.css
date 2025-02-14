@@ -123,3 +123,12 @@ document.getElementById("newPlayMusic").addEventListener("click", function() {
     }
 });
 
+/* Estilos para los corazones */
+.heart {
+    position: fixed;
+    top: -10px;
+    font-size: 25px;
+    color: red;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
