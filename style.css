@@ -122,13 +122,3 @@ document.getElementById("newPlayMusic").addEventListener("click", function() {
         this.textContent = "🎵 Reproducir Música";
     }
 });
-
-/* Estilos para los corazones */
-.heart {
-    position: fixed;
-    top: -10px;
-    font-size: 25px;
-    color: red;
-    opacity: 0.8;
-    animation: fall linear infinite;
-}
