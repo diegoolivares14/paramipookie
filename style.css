@@ -12,6 +12,23 @@ body {
     display: inline-block;
 }
 
+/* Estilos para los corazones */
+.heart {
+    position: fixed;
+    top: -10px;
+    font-size: 25px;
+    color: red;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
 button {
     background:#ff5e78;
     color: white;
@@ -126,4 +143,14 @@ button:hover {
 
 #playMusic:hover {
     background: #ffdb4d;
+}
+
+/* Estilos para los corazones */
+.heart {
+    position: fixed;
+    top: -10px;
+    font-size: 25px;
+    color: red;
+    opacity: 0.8;
+    animation: fall linear infinite;
 }
