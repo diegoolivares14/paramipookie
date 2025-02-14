@@ -49,29 +49,3 @@ playButton.addEventListener("click", function() {
     }
     isPlaying = !isPlaying;
 });
-
-// Función para crear corazones
-    function createHeart() {
-        const heart = document.createElement("div");
-        heart.innerHTML = "❤️";
-        heart.classList.add("heart");
-
-        // Establece el tamaño aleatorio para el corazón
-        const size = Math.random() * 20 + 10;
-        heart.style.fontSize = `${size}px`;
-
-        // Posiciona el corazón en una ubicación aleatoria
-        heart.style.left = `${Math.random() * 100}vw`;
-        heart.style.top = `${Math.random() * -50}vh`; // Para que inicien desde la parte superior
-
-        // Añadir el corazón al body
-        document.body.appendChild(heart);
-
-        // Eliminar el corazón después de la animación
-        setTimeout(() => {
-            heart.remove();
-        }, 5000); // 5 segundos, puedes ajustar el tiempo según la duración de la animación
-    }
-
-    // Llamar a la función cada 300 ms
-    setInterval(createHeart, 300);
